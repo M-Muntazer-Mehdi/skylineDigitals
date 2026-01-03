@@ -16,12 +16,12 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
+            <h1 className="hidden md:block text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
               <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
                 SkylineDigitals
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto lg:mx-0">
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto lg:mx-0 pt-16 md:pt-0">
               Your trusted partner for innovative technology solutions
             </p>
             <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto lg:mx-0">

@@ -64,9 +64,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex-1 min-w-0 pr-2">
             <Link href="/">
-              <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent cursor-pointer">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent cursor-pointer truncate">
                 SkylineDigitals
               </h1>
             </Link>
@@ -107,10 +107,10 @@ export default function Navbar() {
               Contact
             </Link>
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-primary-600 transition-colors"
+              className="text-gray-700 hover:text-primary-600 transition-colors p-2 -mr-2"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
@@ -148,20 +148,22 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed inset-0 top-16 bg-white z-40 transition-transform duration-300 ease-in-out ${
+          className={`md:hidden fixed left-0 right-0 bottom-0 bg-white z-40 transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
+          style={{ top: '64px' }}
         >
           {/* Backdrop */}
           {isMobileMenuOpen && (
             <div
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm -z-10"
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm"
+              style={{ top: '64px', zIndex: 39 }}
               onClick={() => setIsMobileMenuOpen(false)}
             />
           )}
 
           {/* Menu Content */}
-          <div className="h-full overflow-y-auto bg-white shadow-xl">
+          <div className="h-full overflow-y-auto bg-white shadow-xl relative z-50" style={{ height: 'calc(100vh - 64px)' }}>
             <div className="px-4 py-6 space-y-4">
               <Link
                 href="/"
