@@ -355,12 +355,12 @@ export default function ProjectsPage() {
       gradient: 'from-yellow-500 via-amber-500 to-orange-500',
     },
     {
-      title: 'E-Commerce SEO Optimization',
+      title: 'SEO Optimization',
       category: 'SEO',
       description:
-        'Complete SEO overhaul for e-commerce platform resulting in 250% increase in organic traffic and improved search rankings.',
+        'Complete SEO overhaul resulting in 250% increase in organic traffic and improved search rankings.',
       fullDescription:
-        'Performed comprehensive SEO optimization for an e-commerce platform including keyword research, on-page optimization, technical SEO audits, link building strategies, and content optimization. The campaign resulted in 250% increase in organic traffic, improved search rankings for target keywords, and enhanced conversion rates.',
+        'Performed comprehensive SEO optimization including keyword research, on-page optimization, technical SEO audits, link building strategies, and content optimization. The campaign resulted in 250% increase in organic traffic, improved search rankings for target keywords, and enhanced conversion rates.',
       technologies: ['Google Analytics', 'SEMrush', 'Ahrefs', 'Screaming Frog', 'Google Search Console'],
       image: '/images/projects/E-Commerceseo.png',
       link: '#',
@@ -372,7 +372,7 @@ export default function ProjectsPage() {
         'Content optimization',
         'Performance monitoring',
       ],
-      client: 'E-Commerce Platform',
+      client: 'Various Clients',
       duration: '4 months',
       status: 'Completed',
       gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
