@@ -233,7 +233,7 @@ export default function ServicesPage() {
         'Beautiful, intuitive user interfaces and experiences. Design that engages users and drives conversions.',
       fullDescription:
         'We create beautiful, intuitive user interfaces and experiences that not only look great but also drive user engagement and conversions. Our design process focuses on understanding user needs and creating solutions that are both aesthetically pleasing and highly functional.',
-      illustration: '/images/services/uiux.svg',
+      illustration: '/images/services/ui.png',
       icon: (
         <svg
           className="w-12 h-12"
@@ -381,7 +381,7 @@ export default function ServicesPage() {
         'Comprehensive medical billing solutions and revenue cycle management. Streamline healthcare billing processes and maximize revenue.',
       fullDescription:
         'We provide comprehensive medical billing services and revenue cycle management solutions for healthcare providers. Our services include claim submission, payment posting, denial management, patient billing, and revenue optimization. We help healthcare practices streamline their billing processes, reduce errors, and maximize revenue collection.',
-      illustration: '/images/services/medicalblling.png',
+      illustration: '/images/services/medcalbil.svg',
       icon: (
         <svg
           className="w-12 h-12"

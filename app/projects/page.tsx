@@ -1,12 +1,13 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-
-export const metadata = {
-  title: 'Our Projects - SkylineDigitals',
-  description: 'Explore our portfolio of successful projects and innovative solutions',
-}
+import { useState } from 'react'
 
 export default function ProjectsPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
   const projects = [
     {
       title: 'BackPack Buddies',
@@ -16,7 +17,7 @@ export default function ProjectsPage() {
       fullDescription:
         'BackPack Buddies is a Flutter-based social travel app built for a client, helping users connect with nearby backpackers, find jobs, and communicate in real time. Developed the entire frontend including UI/UX, real-time chat, push notifications, onboarding, authentication, and location-based features. Enhanced ~40% of the backend (Firestore structure, Cloud Functions, auth flows). The app delivers a scalable, smooth experience across both Android and iOS with 40+ screens and 6+ major features.',
       technologies: ['Flutter', 'Firebase', 'GetX', 'Google Maps API', 'Cloud Firestore'],
-      image: '/images/projects/featured.png', // Using featured image as placeholder
+      image: '/images/projects/featured.png',
       link: '#',
       features: [
         'Real-time chat and messaging',
@@ -29,6 +30,7 @@ export default function ProjectsPage() {
       client: 'Travel Tech Startup',
       duration: '2 months',
       status: 'Live',
+      gradient: 'from-blue-500 via-cyan-500 to-teal-500',
     },
     {
       title: 'Yo.Works',
@@ -51,6 +53,7 @@ export default function ProjectsPage() {
       client: 'Marketing Agency',
       duration: '2 months',
       status: 'Live',
+      gradient: 'from-purple-500 via-pink-500 to-rose-500',
     },
     {
       title: 'AR Camera App',
@@ -73,6 +76,7 @@ export default function ProjectsPage() {
       client: 'AR Tech Company',
       duration: '2 months',
       status: 'Live',
+      gradient: 'from-violet-500 via-purple-500 to-fuchsia-500',
     },
     {
       title: 'Meetwise',
@@ -95,6 +99,7 @@ export default function ProjectsPage() {
       client: 'Productivity SaaS',
       duration: '3 months',
       status: 'Live',
+      gradient: 'from-green-500 via-emerald-500 to-teal-500',
     },
     {
       title: 'Omnigen.AI',
@@ -117,6 +122,7 @@ export default function ProjectsPage() {
       client: 'AI SaaS Platform',
       duration: '2 months',
       status: 'Live',
+      gradient: 'from-orange-500 via-red-500 to-pink-500',
     },
     {
       title: 'Contractly',
@@ -139,6 +145,7 @@ export default function ProjectsPage() {
       client: 'Legal Tech Company',
       duration: '2 months',
       status: 'Live',
+      gradient: 'from-indigo-500 via-blue-500 to-cyan-500',
     },
     {
       title: 'RAGnet',
@@ -161,6 +168,7 @@ export default function ProjectsPage() {
       client: 'Content Marketing Agency',
       duration: '1 month',
       status: 'Live',
+      gradient: 'from-amber-500 via-yellow-500 to-orange-500',
     },
     {
       title: 'SHIPEASE - Web Application',
@@ -183,6 +191,7 @@ export default function ProjectsPage() {
       client: 'Logistics Company',
       duration: '6 months',
       status: 'Live',
+      gradient: 'from-teal-500 via-cyan-500 to-blue-500',
     },
     {
       title: 'SHIPEASE - Mobile App',
@@ -205,6 +214,7 @@ export default function ProjectsPage() {
       client: 'Logistics Company',
       duration: '6 months',
       status: 'Live',
+      gradient: 'from-emerald-500 via-green-500 to-teal-500',
     },
     {
       title: 'Retail Behavior Analyzer',
@@ -227,6 +237,7 @@ export default function ProjectsPage() {
       client: 'Retail Chain',
       duration: '2 months',
       status: 'Completed',
+      gradient: 'from-slate-500 via-gray-500 to-zinc-500',
     },
     {
       title: 'E-Voting Mobile App',
@@ -249,6 +260,7 @@ export default function ProjectsPage() {
       client: 'Government Organization',
       duration: '4 months',
       status: 'Live',
+      gradient: 'from-red-500 via-rose-500 to-pink-500',
     },
     {
       title: 'Lost & Found Platform',
@@ -271,6 +283,7 @@ export default function ProjectsPage() {
       client: 'Community Organization',
       duration: '1 month',
       status: 'Live',
+      gradient: 'from-lime-500 via-green-500 to-emerald-500',
     },
     {
       title: 'HotelEase',
@@ -293,6 +306,7 @@ export default function ProjectsPage() {
       client: 'Hotel Chain',
       duration: '1 month',
       status: 'Live',
+      gradient: 'from-cyan-500 via-blue-500 to-indigo-500',
     },
     {
       title: 'Inventory Tracker',
@@ -315,6 +329,7 @@ export default function ProjectsPage() {
       client: 'Retail Business',
       duration: '3 months',
       status: 'Live',
+      gradient: 'from-violet-500 via-purple-500 to-indigo-500',
     },
     {
       title: 'Local SEO Optimization Campaign',
@@ -337,6 +352,7 @@ export default function ProjectsPage() {
       client: 'Local Business',
       duration: '3 months',
       status: 'Completed',
+      gradient: 'from-yellow-500 via-amber-500 to-orange-500',
     },
     {
       title: 'E-Commerce SEO Optimization',
@@ -359,22 +375,65 @@ export default function ProjectsPage() {
       client: 'E-Commerce Platform',
       duration: '4 months',
       status: 'Completed',
+      gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
     },
   ]
 
+  const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))]
+
+  const filteredProjects = selectedCategory === 'All' 
+    ? projects 
+    : projects.filter(p => p.category === selectedCategory)
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-32 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our Projects
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md text-white rounded-full text-sm font-medium mb-6 border border-white/30">
+              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+              Our Portfolio
+            </div>
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
+              Our <span className="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">Projects</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto">
-              Showcasing our expertise through successful projects and innovative
-              solutions
+            <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
+              Showcasing our expertise through successful projects and innovative solutions that drive real results
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`
+                  px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
+                  ${
+                    selectedCategory === category
+                      ? 'bg-primary-600 text-white shadow-lg scale-105'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105'
+                  }
+                `}
+              >
+                {category}
+                {selectedCategory === category && (
+                  <span className="ml-2 inline-block w-2 h-2 bg-white rounded-full"></span>
+                )}
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -382,106 +441,190 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
-              >
-                {/* Project Image */}
-                <div className="relative h-64 bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+          <div className="mb-8 flex items-center justify-between">
+            <p className="text-gray-600">
+              Showing <span className="font-semibold text-primary-600">{filteredProjects.length}</span> project{filteredProjects.length !== 1 ? 's' : ''}
+            </p>
+          </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-semibold text-primary-600">
-                      {project.category}
-                    </span>
-                    <span
-                      className={`text-xs px-2 py-1 rounded-full ${
-                        project.status === 'Live'
-                          ? 'bg-green-100 text-green-700'
-                          : 'bg-blue-100 text-blue-700'
-                      }`}
-                    >
-                      {project.status}
-                    </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => (
+              <Link
+                key={index}
+                href={project.link}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className="group relative block"
+              >
+                <div className={`
+                  relative h-full rounded-2xl overflow-hidden
+                  bg-white border border-gray-200/50
+                  shadow-lg
+                  transition-all duration-500
+                  hover:shadow-2xl hover:-translate-y-2
+                  ${hoveredIndex === index ? 'scale-[1.02]' : 'scale-100'}
+                `}>
+                  {/* Image Container */}
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    
+                    {/* Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+                    
+                    {/* Status Badge */}
+                    <div className="absolute top-4 right-4">
+                      <span className={`
+                        inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold backdrop-blur-md border
+                        ${
+                          project.status === 'Live'
+                            ? 'bg-green-500/90 text-white border-green-400/50'
+                            : 'bg-blue-500/90 text-white border-blue-400/50'
+                        }
+                      `}>
+                        <span className={`w-2 h-2 rounded-full ${project.status === 'Live' ? 'bg-white animate-pulse' : 'bg-white'}`}></span>
+                        {project.status}
+                      </span>
+                    </div>
+
+                    {/* Category Badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 backdrop-blur-sm text-primary-700 rounded-lg text-xs font-semibold border border-white/50 shadow-lg">
+                        {project.category}
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.slice(0, 4).map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-medium rounded-full"
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300 line-clamp-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">
+                      {project.description}
+                    </p>
+                    
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-medium rounded-lg border border-primary-100"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.technologies.length > 3 && (
+                        <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-lg">
+                          +{project.technologies.length - 3}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Project Meta */}
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4 pb-4 border-b border-gray-100">
+                      <span className="flex items-center gap-1.5">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        {project.client}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {project.duration}
+                      </span>
+                    </div>
+
+                    {/* View Details Link */}
+                    <div className="flex items-center text-primary-600 font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
+                      <span>View Details</span>
+                      <svg
+                        className="w-5 h-5 transition-transform group-hover:translate-x-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 4 && (
-                      <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
-                        +{project.technologies.length - 4} more
-                      </span>
-                    )}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <span>Client: {project.client}</span>
-                    <span>{project.duration}</span>
-                  </div>
-                  <Link
-                    href={project.link}
-                    className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors group-hover:gap-2 gap-1"
-                  >
-                    View Details
-                    <svg
-                      className="w-5 h-5 transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </Link>
+
+                  {/* Hover Border Effect */}
+                  <div className={`
+                    absolute inset-0 rounded-2xl border-2 border-transparent
+                    group-hover:border-primary-300/50
+                    transition-all duration-500
+                    pointer-events-none
+                  `}></div>
+
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 -top-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine pointer-events-none"></div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
+
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-20">
+              <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
+                <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">No projects found</h3>
+              <p className="text-gray-600">Try selecting a different category</p>
+            </div>
+          )}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="relative py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Let's work together to bring your vision to life
+          <p className="text-xl text-primary-100 mb-8 leading-relaxed">
+            Let's work together to bring your vision to life with innovative solutions and cutting-edge technology
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-primary-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-primary-600 rounded-xl font-semibold text-lg hover:bg-primary-50 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
-            Get in Touch
+            <span>Get in Touch</span>
+            <svg
+              className="w-6 h-6 transition-transform group-hover:translate-x-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </Link>
         </div>
       </section>
     </div>
   )
 }
-
