@@ -16,7 +16,7 @@ export default function Projects() {
       image: '/images/projects/featured.png',
       link: '#',
       featured: true,
-      gradient: 'from-blue-500 via-cyan-500 to-teal-500',
+      gradient: 'from-orange-500 via-amber-500 to-yellow-500',
     },
     {
       title: 'Yo.Works',
@@ -26,7 +26,7 @@ export default function Projects() {
       technologies: ['React', 'TypeScript', 'Node.js', 'MySQL', 'Stripe', 'Socket.io'],
       image: '/images/projects/yoworks.png',
       link: '#',
-      gradient: 'from-purple-500 via-pink-500 to-rose-500',
+      gradient: 'from-amber-500 via-orange-500 to-orange-600',
     },
     {
       title: 'Omnigen.AI',
@@ -36,7 +36,7 @@ export default function Projects() {
       technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Stripe', 'Clerk'],
       image: '/images/projects/omnigen.png',
       link: '#',
-      gradient: 'from-orange-500 via-red-500 to-pink-500',
+      gradient: 'from-orange-600 via-orange-500 to-amber-500',
     },
     {
       title: 'Meetwise',
@@ -46,7 +46,7 @@ export default function Projects() {
       technologies: ['Node.js', 'Next.js', 'Python', 'AWS EC2', 'Puppeteer', 'SQLite'],
       image: '/images/projects/meetwise.png',
       link: '#',
-      gradient: 'from-green-500 via-emerald-500 to-teal-500',
+      gradient: 'from-yellow-500 via-amber-500 to-orange-500',
     },
     {
       title: 'Contractly',
@@ -56,7 +56,7 @@ export default function Projects() {
       technologies: ['React', 'TypeScript', 'Material UI', 'Zod', 'Axios'],
       image: '/images/projects/contractly.png',
       link: '#',
-      gradient: 'from-indigo-500 via-blue-500 to-cyan-500',
+      gradient: 'from-amber-600 via-orange-500 to-orange-400',
     },
   ]
 
@@ -67,19 +67,19 @@ export default function Projects() {
     <section id="projects" className="relative py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-primary-600 rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium mb-6 border border-orange-200/50">
+            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
             Our Work
           </div>
           <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
-            Featured <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Showcasing innovative solutions and successful implementations that drive real results
@@ -138,15 +138,10 @@ export default function Projects() {
                           {tech}
                         </span>
                       ))}
-                      {featuredProject.technologies.length > 5 && (
-                        <span className="px-4 py-2 bg-white/20 backdrop-blur-md text-white text-sm font-medium rounded-lg border border-white/30">
-                          +{featuredProject.technologies.length - 5} more
-                        </span>
-                      )}
                     </div>
 
                     {/* View Project Button */}
-                    <div className="inline-flex items-center gap-3 px-6 py-3 bg-white text-primary-600 rounded-xl font-semibold group-hover:gap-5 transition-all duration-300 hover:scale-105 shadow-xl">
+                    <div className="inline-flex items-center gap-3 px-6 py-3 bg-white text-orange-600 rounded-xl font-semibold group-hover:gap-5 transition-all duration-300 hover:scale-105 shadow-xl">
                       <span>Explore Project</span>
                       <svg
                         className="w-6 h-6 transition-transform group-hover:translate-x-2"
@@ -164,9 +159,6 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-
-                {/* Shine effect */}
-                <div className="absolute inset-0 -top-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine pointer-events-none"></div>
               </div>
             </div>
           </a>
@@ -204,7 +196,7 @@ export default function Projects() {
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 backdrop-blur-sm text-primary-700 rounded-lg text-xs font-semibold border border-white/50 shadow-lg">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 backdrop-blur-sm text-orange-700 rounded-lg text-xs font-semibold border border-white/50 shadow-lg">
                       {project.category}
                     </span>
                   </div>
@@ -212,7 +204,7 @@ export default function Projects() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">
@@ -224,7 +216,7 @@ export default function Projects() {
                     {project.technologies.slice(0, 3).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-medium rounded-lg border border-primary-100"
+                        className="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded-lg border border-orange-100"
                       >
                         {tech}
                       </span>
@@ -238,12 +230,7 @@ export default function Projects() {
                 </div>
 
                 {/* Hover Border Effect */}
-                <div className={`
-                  absolute inset-0 rounded-2xl border-2 border-transparent
-                  group-hover:border-primary-300/50
-                  transition-all duration-500
-                  pointer-events-none
-                `}></div>
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-orange-300/50 transition-all duration-500 pointer-events-none"></div>
               </div>
             </a>
           ))}
@@ -253,7 +240,7 @@ export default function Projects() {
         <div className="text-center">
           <a
             href="/projects"
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold text-lg hover:from-primary-700 hover:to-primary-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-primary-500/50"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-orange-600 to-orange-500 text-white rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
           >
             <span>View All Projects</span>
             <svg

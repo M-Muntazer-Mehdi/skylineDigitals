@@ -328,7 +328,7 @@ export default function ServicesPage() {
       fullDescription:
         'We specialize in Local SEO and Google My Business (GMB) optimization to help businesses dominate local search results. Our services include GMB profile optimization, local citation building, review management, local content creation, and geo-targeted strategies. Perfect for businesses targeting customers in specific geographic areas.',
       illustration: '/images/services/localseo.png',
-      showPopularTag: true, // Show POPULAR tag without highlighting
+      showPopularTag: true,
       icon: (
         <svg
           className="w-12 h-12"
@@ -472,15 +472,25 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-32 bg-gradient-to-br from-orange-600 to-amber-500 text-white overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 border border-white/30">
+              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+              What We Offer
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto">
               Comprehensive digital solutions for your business needs
             </p>
           </div>
@@ -496,17 +506,13 @@ export default function ServicesPage() {
                 key={index}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
                   index % 2 === 1 ? 'lg:grid-flow-dense' : ''
-                } ${(service as any).isHighlighted ? 'p-8 bg-gradient-to-br from-primary-50 to-primary-100 rounded-3xl border-4 border-primary-400 shadow-2xl' : ''}`}
+                }`}
               >
                 {/* Image/Illustration */}
                 <div
                   className={`relative h-96 rounded-2xl overflow-hidden ${
                     index % 2 === 1 ? 'lg:col-start-2' : ''
-                  } ${
-                    (service as any).isHighlighted
-                      ? 'bg-gradient-to-br from-primary-200 to-primary-300'
-                      : 'bg-gradient-to-br from-primary-50 to-primary-100'
-                  }`}
+                  } bg-gradient-to-br from-orange-50 to-amber-50`}
                 >
                   {service.illustration.includes('.png') || service.illustration.includes('.jpg') || service.illustration.includes('.jpeg') || service.illustration.includes('.svg') ? (
                     <Image
@@ -518,13 +524,13 @@ export default function ServicesPage() {
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-7xl font-bold text-primary-400 opacity-50 mb-4">
+                        <div className="text-7xl font-bold text-orange-400 opacity-50 mb-4">
                           ?
                         </div>
-                        <p className="text-lg text-primary-600 font-medium mb-2">
+                        <p className="text-lg text-orange-600 font-medium mb-2">
                           Add Illustration
                         </p>
-                        <p className="text-sm text-primary-500">
+                        <p className="text-sm text-orange-500">
                           {service.illustration}
                         </p>
                       </div>
@@ -535,16 +541,16 @@ export default function ServicesPage() {
                 {/* Content */}
                 <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`${(service as any).isHighlighted ? 'text-white' : 'text-primary-600'}`}>
+                    <div className="text-orange-600">
                       {service.icon}
                     </div>
-                    {((service as any).isHighlighted || (service as any).showPopularTag) && (
-                      <span className="bg-yellow-400 text-gray-900 text-sm font-bold px-4 py-2 rounded-full shadow-lg">
+                    {(service as any).showPopularTag && (
+                      <span className="bg-gradient-to-r from-orange-400 to-amber-400 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg">
                         POPULAR SERVICE
                       </span>
                     )}
                   </div>
-                  <h2 className={`text-4xl font-bold mb-4 ${(service as any).isHighlighted ? 'text-primary-600' : 'text-gray-900'}`}>
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h2>
                   <p className="text-xl text-gray-600 mb-6 leading-relaxed">
@@ -563,7 +569,7 @@ export default function ServicesPage() {
                           className="flex items-start space-x-3"
                         >
                           <svg
-                            className="w-6 h-6 text-primary-600 flex-shrink-0 mt-0.5"
+                            className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -590,7 +596,7 @@ export default function ServicesPage() {
                       {service.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-4 py-2 bg-primary-50 text-primary-700 text-sm font-medium rounded-lg"
+                          className="px-4 py-2 bg-orange-50 text-orange-700 text-sm font-medium rounded-lg border border-orange-100"
                         >
                           {tech}
                         </span>
@@ -609,7 +615,7 @@ export default function ServicesPage() {
                           key={delIndex}
                           className="flex items-center space-x-3 text-gray-700"
                         >
-                          <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                           <span>{deliverable}</span>
                         </li>
                       ))}
@@ -623,23 +629,25 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
+          <p className="text-xl text-orange-100 mb-8">
             Let's discuss how we can help transform your business
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-primary-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
           >
             Contact Us
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </section>
     </div>
   )
 }
-

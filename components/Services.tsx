@@ -11,7 +11,7 @@ export default function Services() {
       title: 'Software Development',
       description:
         'Custom software solutions tailored to your business needs. From enterprise applications to specialized tools.',
-      illustration: '/images/services/software-development.png',
+      illustration: '/images/services/softwaredev.png',
       icon: (
         <svg
           className="w-12 h-12"
@@ -27,14 +27,14 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-blue-500 to-cyan-500',
-      bgGradient: 'from-blue-50 to-cyan-50',
+      gradient: 'from-orange-500 to-amber-500',
+      bgGradient: 'from-orange-50 to-amber-50',
     },
     {
       title: 'Mobile Apps',
       description:
         'Native and cross-platform mobile applications for iOS and Android. Beautiful, performant, and user-friendly.',
-      illustration: '/images/services/mobileapp.png',
+      illustration: '/images/services/mobiledev.png',
       icon: (
         <svg
           className="w-12 h-12"
@@ -50,14 +50,14 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-purple-500 to-pink-500',
-      bgGradient: 'from-purple-50 to-pink-50',
+      gradient: 'from-amber-500 to-yellow-500',
+      bgGradient: 'from-amber-50 to-yellow-50',
     },
     {
       title: 'Web Development',
       description:
         'Modern, responsive websites and web applications. Built with the latest technologies for optimal performance.',
-      illustration: '/images/services/web.png',
+      illustration: '/images/services/webdev.png',
       icon: (
         <svg
           className="w-12 h-12"
@@ -73,14 +73,14 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-green-500 to-emerald-500',
-      bgGradient: 'from-green-50 to-emerald-50',
+      gradient: 'from-orange-600 to-orange-400',
+      bgGradient: 'from-orange-50 to-orange-100/50',
     },
     {
       title: 'AI & Machine Learning',
       description:
         'Intelligent solutions powered by AI and ML. Automation, predictive analytics, and smart decision-making systems.',
-      illustration: '/images/services/aiandmachine.png',
+      illustration: '/images/services/aiandmachine.avif',
       icon: (
         <svg
           className="w-12 h-12"
@@ -96,14 +96,14 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-orange-500 to-red-500',
-      bgGradient: 'from-orange-50 to-red-50',
+      gradient: 'from-amber-600 to-orange-500',
+      bgGradient: 'from-amber-50 to-orange-50',
     },
     {
       title: 'Cloud Solutions',
       description:
         'Scalable cloud infrastructure and deployment. AWS, Azure, GCP expertise for reliable and secure solutions.',
-      illustration: '/images/services/cloudsolution.png',
+      illustration: '/images/services/cloud.png',
       icon: (
         <svg
           className="w-12 h-12"
@@ -119,14 +119,14 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-indigo-500 to-blue-500',
-      bgGradient: 'from-indigo-50 to-blue-50',
+      gradient: 'from-yellow-500 to-amber-500',
+      bgGradient: 'from-yellow-50 to-amber-50',
     },
     {
       title: 'UI/UX Design',
       description:
         'Beautiful, intuitive user interfaces and experiences. Design that engages users and drives conversions.',
-      illustration: '/images/services/ui.png',
+      illustration: '/images/services/uiux.png',
       icon: (
         <svg
           className="w-12 h-12"
@@ -142,14 +142,14 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-pink-500 to-rose-500',
-      bgGradient: 'from-pink-50 to-rose-50',
+      gradient: 'from-orange-500 to-yellow-500',
+      bgGradient: 'from-orange-50 to-yellow-50',
     },
     {
       title: 'SEO',
       description:
         'Search Engine Optimization to improve your website visibility and rankings. Drive organic traffic and increase conversions.',
-      illustration: '/images/services/seo.svg',
+      illustration: '/images/services/seo.avif',
       icon: (
         <svg
           className="w-12 h-12"
@@ -165,8 +165,8 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-yellow-500 to-amber-500',
-      bgGradient: 'from-yellow-50 to-amber-50',
+      gradient: 'from-amber-500 to-orange-500',
+      bgGradient: 'from-amber-50 to-orange-50',
     },
     {
       title: 'Local SEO / GMB',
@@ -195,14 +195,14 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-teal-500 to-cyan-500',
-      bgGradient: 'from-teal-50 to-cyan-50',
+      gradient: 'from-orange-600 to-amber-500',
+      bgGradient: 'from-orange-50 to-amber-50',
     },
     {
       title: 'Medical Billing',
       description:
         'Comprehensive medical billing solutions and revenue cycle management. Streamline healthcare billing processes and maximize revenue.',
-      illustration: '/images/services/medcalbil.svg',
+      illustration: '/images/services/medicalbilling.jpg',
       icon: (
         <svg
           className="w-12 h-12"
@@ -218,8 +218,8 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-emerald-500 to-green-500',
-      bgGradient: 'from-emerald-50 to-green-50',
+      gradient: 'from-yellow-500 to-orange-500',
+      bgGradient: 'from-yellow-50 to-orange-50',
     },
     {
       title: 'Animation',
@@ -241,28 +241,28 @@ export default function Services() {
           />
         </svg>
       ),
-      gradient: 'from-violet-500 to-purple-500',
-      bgGradient: 'from-violet-50 to-purple-50',
+      gradient: 'from-amber-600 to-yellow-500',
+      bgGradient: 'from-amber-50 to-yellow-50',
     },
   ]
 
   return (
-    <section id="services" className="relative py-24 bg-gradient-to-b from-white via-primary-50/30 to-white overflow-hidden">
+    <section id="services" className="relative py-24 bg-gradient-to-b from-white via-orange-50/20 to-white overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-primary-600 rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium mb-6 border border-orange-200/50">
+            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
             What We Offer
           </div>
           <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
-            Our <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">Services</span>
+            Our <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive digital solutions tailored to transform your business and drive growth
@@ -280,25 +280,26 @@ export default function Services() {
               className="group relative"
             >
               <div className={`
-                relative h-full p-8 rounded-2xl 
-                bg-white/80 backdrop-blur-sm
-                border border-gray-200/50
+                relative h-full rounded-2xl 
+                bg-white border border-orange-100/60
                 transition-all duration-500 ease-out
-                hover:shadow-2xl hover:-translate-y-2
-                ${hoveredIndex === index ? 'scale-105' : 'scale-100'}
+                hover:shadow-xl hover:shadow-orange-200/20 hover:-translate-y-2
+                hover:border-orange-200
+                ${hoveredIndex === index ? 'scale-[1.02] ring-2 ring-orange-200/50' : 'scale-100'}
                 overflow-hidden
               `}>
-                {/* Gradient overlay on hover */}
+                {/* Sunset glow ring on hover */}
+                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-orange-200/0 via-amber-100/0 to-orange-300/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none group-hover:blur-0" style={{ boxShadow: '0 0 32px rgba(251,146,60,0.12)' }} />
+                {/* Soft gradient overlay on hover */}
                 <div className={`
                   absolute inset-0 bg-gradient-to-br ${service.gradient} 
-                  opacity-0 group-hover:opacity-5 
-                  transition-opacity duration-500
-                `}></div>
-
-                {/* Popular Badge */}
+                  opacity-0 group-hover:opacity-[0.06] 
+                  transition-opacity duration-500 pointer-events-none
+                `} />
+                {/* Popular Badge - overlays card */}
                 {(service as any).showPopularTag && (
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-yellow-400 to-amber-400 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                    <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-orange-400 to-amber-400 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
@@ -306,67 +307,57 @@ export default function Services() {
                     </span>
                   </div>
                 )}
-
-                {/* Icon with gradient background */}
+                <div className="relative p-6 sm:p-8">
+                {/* Service Image - hero style with sunset glow (image first) */}
                 <div className={`
-                  relative mb-6 w-20 h-20 rounded-2xl 
+                  relative h-44 mb-6 rounded-xl overflow-hidden
                   bg-gradient-to-br ${service.bgGradient}
-                  flex items-center justify-center
-                  group-hover:scale-110 group-hover:rotate-3
+                  border border-orange-100 group-hover:border-orange-200
+                  shadow-inner
                   transition-all duration-500
-                  shadow-lg group-hover:shadow-xl
+                  group-hover:shadow-lg group-hover:shadow-orange-200/30
                 `}>
-                  <div className={`text-primary-600 group-hover:scale-110 transition-transform duration-500`}>
-                    {service.icon}
-                  </div>
-                  {/* Animated ring on hover */}
-                  <div className={`
-                    absolute inset-0 rounded-2xl border-2 
-                    border-transparent group-hover:border-primary-300/50
-                    transition-all duration-500
-                    ${hoveredIndex === index ? 'animate-ping opacity-20' : ''}
-                  `}></div>
-                </div>
-
-                {/* Service Illustration */}
-                <div className={`
-                  relative h-40 mb-6 rounded-xl overflow-hidden
-                  bg-gradient-to-br ${service.bgGradient}
-                  group-hover:scale-105 transition-transform duration-500
-                `}>
-                  {service.illustration.includes('.png') || service.illustration.includes('.jpg') || service.illustration.includes('.jpeg') || service.illustration.includes('.svg') ? (
+                  {/* Sunset glow on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-400/0 via-transparent to-amber-300/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-br from-orange-300/0 via-transparent to-amber-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm" style={{ boxShadow: '0 0 24px rgba(251,146,60,0.15)' }} />
+                  {/\.(png|jpg|jpeg|svg|avif)$/i.test(service.illustration) ? (
                     <Image
                       src={service.illustration}
                       alt={service.title}
                       fill
-                      className="object-contain p-4"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-4xl font-bold text-primary-400 opacity-50 mb-2">?</div>
-                        <p className="text-xs text-primary-600 font-medium">Add Illustration</p>
+                        <div className="text-4xl font-bold text-orange-400 opacity-50 mb-2">?</div>
+                        <p className="text-xs text-orange-600 font-medium">Add Illustration</p>
                       </div>
                     </div>
                   )}
-                  {/* Overlay gradient */}
-                  <div className={`
-                    absolute inset-0 bg-gradient-to-t ${service.gradient} 
-                    opacity-0 group-hover:opacity-10 
-                    transition-opacity duration-500
-                  `}></div>
                 </div>
 
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Shine effect on hover */}
-                <div className="absolute inset-0 -top-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine pointer-events-none"></div>
+                {/* Icon + Content */}
+                <div className="flex items-start gap-4 mb-4">
+                  <div className={`
+                    flex-shrink-0 w-12 h-12 rounded-xl 
+                    bg-gradient-to-br ${service.bgGradient}
+                    flex items-center justify-center
+                    group-hover:scale-110 transition-transform duration-300
+                  `}>
+                    <div className="text-orange-600">{service.icon}</div>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mt-1 line-clamp-2">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+                </div>
               </div>
             </a>
           ))}
@@ -376,7 +367,7 @@ export default function Services() {
         <div className="text-center">
           <a
             href="/services"
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold text-lg hover:from-primary-700 hover:to-primary-600 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-primary-500/50"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-orange-600 to-orange-500 text-white rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
           >
             <span>Explore All Services</span>
             <svg

@@ -160,7 +160,7 @@ export default function AboutPage() {
           />
         </svg>
       ),
-      gradient: 'from-blue-500 to-blue-600',
+      gradient: 'from-orange-500 to-orange-600',
     },
     {
       name: 'Design Team',
@@ -182,7 +182,7 @@ export default function AboutPage() {
           />
         </svg>
       ),
-      gradient: 'from-purple-500 to-purple-600',
+      gradient: 'from-amber-500 to-amber-600',
     },
     {
       name: 'AI/ML Team',
@@ -204,7 +204,7 @@ export default function AboutPage() {
           />
         </svg>
       ),
-      gradient: 'from-green-500 to-green-600',
+      gradient: 'from-yellow-500 to-yellow-600',
     },
     {
       name: 'DevOps Team',
@@ -226,20 +226,28 @@ export default function AboutPage() {
           />
         </svg>
       ),
-      gradient: 'from-orange-500 to-orange-600',
+      gradient: 'from-orange-600 to-amber-500',
     },
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-32 bg-gradient-to-br from-orange-600 to-amber-500 text-white overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 border border-white/30">
+              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+              About Us
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About SkylineDigitals
+              About <span className="text-orange-200">SkylineDigitals</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto">
               Your trusted partner for innovative technology solutions
             </p>
           </div>
@@ -251,8 +259,12 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium mb-6 border border-orange-200/50">
+                <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                Our Journey
+              </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Our Story
+                Our <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">Story</span>
               </h2>
               <p className="text-lg text-gray-600 mb-4 leading-relaxed">
                 SkylineDigitals was founded with a vision to transform businesses
@@ -274,7 +286,7 @@ export default function AboutPage() {
                 of all sizes, from startups to Fortune 500 companies.
               </p>
             </div>
-            <div className="relative h-96 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl overflow-hidden">
+            <div className="relative h-96 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/services/office.jpg"
                 alt="SkylineDigitals Office"
@@ -287,12 +299,12 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-orange-50/50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -303,11 +315,15 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium mb-6 border border-orange-200/50">
+              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+              What We Stand For
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Values
+              Our <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">Values</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               The principles that guide everything we do
@@ -318,10 +334,10 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl border border-gray-200 hover:border-primary-300 transition-all duration-300 hover:shadow-xl"
+                className="bg-white p-8 rounded-xl border border-gray-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl group"
               >
-                <div className="text-primary-600 mb-4">{value.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <div className="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300">{value.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
                   {value.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -334,11 +350,15 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-orange-50/50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium mb-6 border border-orange-200/50">
+              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+              Meet Our Team
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Teams
+              Our <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">Teams</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Meet the talented professionals behind our success
@@ -349,7 +369,7 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-white to-primary-50 p-6 rounded-xl border border-primary-100 hover:border-primary-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="bg-white p-6 rounded-xl border border-orange-100 hover:border-orange-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
               >
                 <div className={`relative h-48 bg-gradient-to-br ${member.gradient} rounded-lg mb-4 overflow-hidden flex items-center justify-center shadow-lg`}>
                   <div className="text-white opacity-90">
@@ -360,7 +380,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-primary-600 font-medium mb-3">
+                <p className="text-orange-600 font-medium mb-3">
                   {member.role}
                 </p>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -373,11 +393,11 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
-              <div className="text-primary-600 mb-4">
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-xl border border-orange-100 shadow-lg">
+              <div className="text-orange-600 mb-4">
                 <svg
                   className="w-12 h-12"
                   fill="none"
@@ -403,8 +423,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-lg">
-              <div className="text-primary-600 mb-4">
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-xl border border-orange-100 shadow-lg">
+              <div className="text-orange-600 mb-4">
                 <svg
                   className="w-12 h-12"
                   fill="none"
@@ -440,23 +460,25 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
+          <p className="text-xl text-orange-100 mb-8">
             Let's discuss how we can help transform your business
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-primary-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
           >
             Get in Touch
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </section>
     </div>
   )
 }
-

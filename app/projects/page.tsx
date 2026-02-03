@@ -30,7 +30,7 @@ export default function ProjectsPage() {
       client: 'Travel Tech Startup',
       duration: '2 months',
       status: 'Live',
-      gradient: 'from-blue-500 via-cyan-500 to-teal-500',
+      gradient: 'from-orange-500 via-amber-500 to-yellow-500',
     },
     {
       title: 'Yo.Works',
@@ -53,7 +53,7 @@ export default function ProjectsPage() {
       client: 'Marketing Agency',
       duration: '2 months',
       status: 'Live',
-      gradient: 'from-purple-500 via-pink-500 to-rose-500',
+      gradient: 'from-amber-500 via-orange-500 to-orange-600',
     },
     {
       title: 'AR Camera App',
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
       client: 'AR Tech Company',
       duration: '2 months',
       status: 'Live',
-      gradient: 'from-violet-500 via-purple-500 to-fuchsia-500',
+      gradient: 'from-orange-600 via-amber-500 to-yellow-500',
     },
     {
       title: 'Meetwise',
@@ -99,7 +99,7 @@ export default function ProjectsPage() {
       client: 'Productivity SaaS',
       duration: '3 months',
       status: 'Live',
-      gradient: 'from-green-500 via-emerald-500 to-teal-500',
+      gradient: 'from-yellow-500 via-amber-500 to-orange-500',
     },
     {
       title: 'Omnigen.AI',
@@ -122,7 +122,7 @@ export default function ProjectsPage() {
       client: 'AI SaaS Platform',
       duration: '2 months',
       status: 'Live',
-      gradient: 'from-orange-500 via-red-500 to-pink-500',
+      gradient: 'from-orange-500 via-orange-600 to-amber-500',
     },
     {
       title: 'Contractly',
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
       client: 'Legal Tech Company',
       duration: '2 months',
       status: 'Live',
-      gradient: 'from-indigo-500 via-blue-500 to-cyan-500',
+      gradient: 'from-amber-600 via-orange-500 to-orange-400',
     },
     {
       title: 'RAGnet',
@@ -191,7 +191,7 @@ export default function ProjectsPage() {
       client: 'Logistics Company',
       duration: '6 months',
       status: 'Live',
-      gradient: 'from-teal-500 via-cyan-500 to-blue-500',
+      gradient: 'from-orange-500 via-amber-500 to-yellow-500',
     },
     {
       title: 'SHIPEASE - Mobile App',
@@ -214,7 +214,7 @@ export default function ProjectsPage() {
       client: 'Logistics Company',
       duration: '6 months',
       status: 'Live',
-      gradient: 'from-emerald-500 via-green-500 to-teal-500',
+      gradient: 'from-yellow-500 via-amber-500 to-orange-500',
     },
     {
       title: 'Retail Behavior Analyzer',
@@ -237,7 +237,7 @@ export default function ProjectsPage() {
       client: 'Retail Chain',
       duration: '2 months',
       status: 'Completed',
-      gradient: 'from-slate-500 via-gray-500 to-zinc-500',
+      gradient: 'from-amber-600 via-orange-500 to-yellow-500',
     },
     {
       title: 'E-Voting Mobile App',
@@ -260,7 +260,7 @@ export default function ProjectsPage() {
       client: 'Government Organization',
       duration: '4 months',
       status: 'Live',
-      gradient: 'from-red-500 via-rose-500 to-pink-500',
+      gradient: 'from-orange-600 via-orange-500 to-amber-500',
     },
     {
       title: 'Lost & Found Platform',
@@ -283,7 +283,7 @@ export default function ProjectsPage() {
       client: 'Community Organization',
       duration: '1 month',
       status: 'Live',
-      gradient: 'from-lime-500 via-green-500 to-emerald-500',
+      gradient: 'from-amber-500 via-yellow-500 to-orange-500',
     },
     {
       title: 'HotelEase',
@@ -306,7 +306,7 @@ export default function ProjectsPage() {
       client: 'Hotel Chain',
       duration: '1 month',
       status: 'Live',
-      gradient: 'from-cyan-500 via-blue-500 to-indigo-500',
+      gradient: 'from-orange-500 via-amber-500 to-yellow-500',
     },
     {
       title: 'Inventory Tracker',
@@ -329,7 +329,7 @@ export default function ProjectsPage() {
       client: 'Retail Business',
       duration: '3 months',
       status: 'Live',
-      gradient: 'from-violet-500 via-purple-500 to-indigo-500',
+      gradient: 'from-amber-600 via-orange-500 to-orange-400',
     },
     {
       title: 'Local SEO Optimization Campaign',
@@ -375,7 +375,7 @@ export default function ProjectsPage() {
       client: 'Various Clients',
       duration: '4 months',
       status: 'Completed',
-      gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
+      gradient: 'from-orange-500 via-amber-500 to-yellow-500',
     },
   ]
 
@@ -386,13 +386,13 @@ export default function ProjectsPage() {
     : projects.filter(p => p.category === selectedCategory)
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
+      <section className="relative py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-amber-500 text-white overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -402,9 +402,9 @@ export default function ProjectsPage() {
               Our Portfolio
             </div>
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
-              Our <span className="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">Projects</span>
+              Our <span className="bg-gradient-to-r from-white to-orange-200 bg-clip-text text-transparent">Projects</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto leading-relaxed">
               Showcasing our expertise through successful projects and innovative solutions that drive real results
             </p>
           </div>
@@ -412,7 +412,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
+      <section className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
@@ -423,8 +423,8 @@ export default function ProjectsPage() {
                   px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
                   ${
                     selectedCategory === category
-                      ? 'bg-primary-600 text-white shadow-lg scale-105'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105'
+                      ? 'bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg shadow-orange-500/25 scale-105'
+                      : 'bg-gray-100 text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:scale-105'
                   }
                 `}
               >
@@ -443,7 +443,7 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex items-center justify-between">
             <p className="text-gray-600">
-              Showing <span className="font-semibold text-primary-600">{filteredProjects.length}</span> project{filteredProjects.length !== 1 ? 's' : ''}
+              Showing <span className="font-semibold text-orange-600">{filteredProjects.length}</span> project{filteredProjects.length !== 1 ? 's' : ''}
             </p>
           </div>
 
@@ -483,7 +483,7 @@ export default function ProjectsPage() {
                         ${
                           project.status === 'Live'
                             ? 'bg-green-500/90 text-white border-green-400/50'
-                            : 'bg-blue-500/90 text-white border-blue-400/50'
+                            : 'bg-orange-500/90 text-white border-orange-400/50'
                         }
                       `}>
                         <span className={`w-2 h-2 rounded-full ${project.status === 'Live' ? 'bg-white animate-pulse' : 'bg-white'}`}></span>
@@ -493,7 +493,7 @@ export default function ProjectsPage() {
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 backdrop-blur-sm text-primary-700 rounded-lg text-xs font-semibold border border-white/50 shadow-lg">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 backdrop-blur-sm text-orange-700 rounded-lg text-xs font-semibold border border-white/50 shadow-lg">
                         {project.category}
                       </span>
                     </div>
@@ -501,7 +501,7 @@ export default function ProjectsPage() {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300 line-clamp-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300 line-clamp-1">
                       {project.title}
                     </h3>
                     <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">
@@ -513,7 +513,7 @@ export default function ProjectsPage() {
                       {project.technologies.slice(0, 3).map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-medium rounded-lg border border-primary-100"
+                          className="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded-lg border border-orange-100"
                         >
                           {tech}
                         </span>
@@ -543,15 +543,7 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* Hover Border Effect */}
-                  <div className={`
-                    absolute inset-0 rounded-2xl border-2 border-transparent
-                    group-hover:border-primary-300/50
-                    transition-all duration-500
-                    pointer-events-none
-                  `}></div>
-
-                  {/* Shine effect */}
-                  <div className="absolute inset-0 -top-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-orange-300/50 transition-all duration-500 pointer-events-none"></div>
                 </div>
               </Link>
             ))}
@@ -559,8 +551,8 @@ export default function ProjectsPage() {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
-                <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-24 h-24 mx-auto mb-6 bg-orange-50 rounded-full flex items-center justify-center">
+                <svg className="w-12 h-12 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -572,23 +564,23 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-amber-500 text-white overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-primary-100 mb-8 leading-relaxed">
+          <p className="text-xl text-orange-100 mb-8 leading-relaxed">
             Let's work together to bring your vision to life with innovative solutions and cutting-edge technology
           </p>
           <Link
             href="/#contact"
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-primary-600 rounded-xl font-semibold text-lg hover:bg-primary-50 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-orange-600 rounded-xl font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
           >
             <span>Get in Touch</span>
             <svg

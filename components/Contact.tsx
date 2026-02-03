@@ -66,8 +66,12 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium mb-6 border border-orange-200/50">
+            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+            Contact Us
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Get in Touch
+            Get in <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ready to start your project? Let's discuss how we can help bring your
@@ -82,9 +86,9 @@ export default function Contact() {
             </h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-primary-600"
+                    className="w-6 h-6 text-orange-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -99,15 +103,15 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                  <a href="mailto:skylinedigitals.tech@gmail.com" className="text-gray-600 hover:text-primary-600 transition-colors">
+                  <a href="mailto:skylinedigitals.tech@gmail.com" className="text-gray-600 hover:text-orange-600 transition-colors">
                     skylinedigitals.tech@gmail.com
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-primary-600"
+                    className="w-6 h-6 text-orange-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -122,15 +126,15 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                  <a href="tel:+923120614503" className="text-gray-600 hover:text-primary-600 transition-colors">
+                  <a href="tel:+923120614503" className="text-gray-600 hover:text-orange-600 transition-colors">
                     +92 312 0614503
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-primary-600"
+                    className="w-6 h-6 text-orange-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -157,7 +161,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-8 border border-primary-100">
+          <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 border border-orange-100">
             <form onSubmit={handleSubmit} className="space-y-6">
               {submitStatus.type && (
                 <div
@@ -186,7 +190,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
@@ -205,7 +209,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -224,14 +228,14 @@ export default function Contact() {
                   required
                   rows={5}
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell us about your project..."
                 />
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold text-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -242,4 +246,3 @@ export default function Contact() {
     </section>
   )
 }
-
