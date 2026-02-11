@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -26,11 +27,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6">
-              <h3 className="text-2xl font-bold">
-                <span className="text-gray-900">Skyline</span>
-                <span className="bg-gradient-to-r from-orange-600 to-amber-500 bg-clip-text text-transparent">Digitals</span>
-              </h3>
+            <Link href="/" className="inline-block mb-6" aria-label="SkylineDigitals Home">
+              <div className="h-20 md:h-24 w-full max-w-[320px] overflow-hidden flex items-center">
+                <Image
+                  src="/images/hero/logo.png"
+                  alt="SkylineDigitals"
+                  width={420}
+                  height={126}
+                  className="h-20 md:h-24 w-auto object-contain scale-[1.4] origin-left object-left"
+                />
+              </div>
             </Link>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Your trusted partner for innovative technology solutions. We transform
