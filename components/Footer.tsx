@@ -28,15 +28,13 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6" aria-label="SkylineDigitals Home">
-              <div className="h-20 md:h-24 w-full max-w-[320px] overflow-hidden flex items-center">
-                <Image
-                  src="/images/hero/logo.png"
-                  alt="SkylineDigitals"
-                  width={420}
-                  height={126}
-                  className="h-20 md:h-24 w-auto object-contain scale-[1.4] origin-left object-left"
-                />
-              </div>
+              <Image
+                src="/images/hero/logo.png"
+                alt="SkylineDigitals"
+                width={360}
+                height={108}
+                className="h-20 md:h-24 w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Your trusted partner for innovative technology solutions. We transform

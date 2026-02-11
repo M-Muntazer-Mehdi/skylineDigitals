@@ -70,16 +70,16 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 md:h-24">
+        <div className="flex justify-between items-center h-16 md:h-18">
           {/* Logo */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link href="/" className="group flex items-center gap-1" aria-label="SkylineDigitals Home">
               <Image
                 src="/images/hero/logo.png"
                 alt="SkylineDigitals"
-                width={400}
-                height={120}
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-opacity group-hover:opacity-90"
+                width={280}
+                height={84}
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-opacity group-hover:opacity-90"
                 priority
               />
             </Link>
