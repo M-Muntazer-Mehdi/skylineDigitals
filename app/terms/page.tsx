@@ -174,7 +174,7 @@ export default function TermsPage() {
             <div className="mt-4 p-6 bg-primary-50 rounded-lg border border-primary-100">
               <p className="text-gray-900 font-semibold mb-2">SkylineDigitals</p>
               <p className="text-gray-600">Email: <a href="mailto:skylinedigitals.tech@gmail.com" className="text-primary-600 hover:underline">skylinedigitals.tech@gmail.com</a></p>
-              <p className="text-gray-600">Phone: <a href="tel:+923120614503" className="text-primary-600 hover:underline">+92 312 0614503</a></p>
+              <p className="text-gray-600">Phone: <a href="tel:+923120614503" className="text-primary-600 hover:underline">+92312-0614503</a></p>
             </div>
           </section>
         </div>

@@ -280,6 +280,8 @@ export default function ServicesPage() {
         'Search Engine Optimization to improve your website visibility and rankings. Drive organic traffic and increase conversions.',
       fullDescription:
         'We provide comprehensive SEO services to improve your website visibility in search engine results. Our strategies include keyword research, on-page optimization, technical SEO, link building, and content optimization. We help businesses rank higher on Google and other search engines, driving organic traffic and increasing conversions.',
+      toolsDescription:
+        'For SEO, we work with tools such as Google Search Console, Google Analytics, Ahrefs, SEMrush, and other professional SEO tools to track performance and optimize results.',
       illustration: '/images/services/seo.svg',
       icon: (
         <svg
@@ -428,6 +430,8 @@ export default function ServicesPage() {
         'Professional 2D and 3D animation services. Engaging motion graphics, video animations, and interactive visual content.',
       fullDescription:
         'We create professional 2D and 3D animations that bring your brand to life. Our animation services include motion graphics, explainer videos, product animations, character animation, and interactive visual content. We help businesses communicate complex ideas through engaging animated content that captivates audiences and drives engagement.',
+      toolsDescription:
+        'For animation, we use After Effects, VideoScribe, Vyond, and several other tools. We use Illustrator for image design.',
       illustration: '/images/services/animation.png',
       icon: (
         <svg
@@ -556,6 +560,11 @@ export default function ServicesPage() {
                   <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                     {service.fullDescription}
                   </p>
+                  {(service as any).toolsDescription && (
+                    <p className="text-lg text-orange-700/90 mb-6 pl-4 border-l-4 border-orange-400 leading-relaxed">
+                      {(service as any).toolsDescription}
+                    </p>
+                  )}
 
                   {/* Features */}
                   <div className="mb-8">

@@ -127,7 +127,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
                   <a href="tel:+923120614503" className="text-gray-600 hover:text-orange-600 transition-colors">
-                    +92 312 0614503
+                    +92312-0614503
                   </a>
                 </div>
               </div>
